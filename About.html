@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="cursor-none overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everything About Me</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="shortcut icon" type="x-icon" href="Asset/logo.png" />
+    <style>
+      .custom-cursor {
+        width: 15px;
+        height: 15px;
+        background-color: #ffff;
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: difference;
+      }
+      a:hover,
+      button:hover {
+        cursor: none;
+      }
+    </style>
+  </head>
+  <body class="bg-black cursor-none overflow-x-hidden">
+    <div class="custom-cursor hidden sm:hidden md:hidden lg:block 2xl:block"></div>
+    <nav class="flex items-center justify-between bg-bg py-4 px-8">
+      <div class="flex items-center">
+        <img src="Asset/logo.png" alt="Logo" class="h-8 w-8 md:h-12 md:w-12 lg:-mt-2" />
+      </div>
+      <div class="flex justify-center md:justify-start lg:justify-center lg:items-center lg:ml-40 sm:justify-start">
+        <ul class="flex space-x-10 md:space-x-20 lg:space-x-24 sm:space-x-20">
+          <li><a href="index.html" class="text-white hover:text-gray-700 md:text-lg">Home</a></li>
+          <li><a href="#" class="text-white hover:text-gray-700 md:text-lg">About</a></li>
+          <li><a href="project.html" class="text-white hover:text-gray-700 md:text-lg">Project</a></li>
+        </ul>
+      </div>
+      <div class="hidden md:block sm:block">
+        <a class="bg-neutral-800 hover:bg-white text-white font-bold py-2 px-4 rounded active:bg-white active:text-black transition-all md:px-8 md:py-4 hover:text-black">Get in Touch</a>
+      </div>
+    </nav>
+    <div class="justify-center items-center container mx-auto flex mt-28 w-96 h-5 ml-5 z-0 sm:w-[34rem] sm:ml-8 sm:mt-28 md:ml-12 md:w-[40rem] lg:w-[70rem] lg:mx-auto lg:mt-11 2xl:mx-96">
+      <h1 class="text-white opacity-30 text-5xl z-0 flex sm:text-6xl sm:mt-10 md:text-7xl md:mt-28 lg:mt-56">Farda Syarif As Fullstack Developer</h1>
+    </div>
+    <div class="container mt-16 sm:justify-center sm:align-middle sm:items-center sm:flex sm:mt-[21rem] md:mt-[32rem] lg:mt-[21rem] lg:mx-auto 2xl:mt-[29rem] 2xl:mx-auto">
+      <img class="z-10 flex absolute sm:w-[28rem] md:w-[40rem] lg:w-[25rem] 2xl:w-[37rem]" src="Asset/Image.png" />
+    </div>
+    <div class="container -ml-14 mt-32 absolute flex float-right sm:-mt-20 sm:-ml-1 2xl:ml-[32rem] 2xl:-mt-60">
+      <img class="z-10 absolute mx-20 sm:z-0 2xl:w-40 2xl:z-40 2xl:absolute" src="Asset/Dots.png" />
+    </div>
+    <div class="float-right mt-20 mr-5 2xl:mr-[30rem] 2xl:mt-56">
+      <img class="sm:z-40 sm:absolute sm:-ml-60 sm:-mt-60 md:-mt-96 md:-ml-72 2xl:z-0 2xl:absolute " src="Asset/Dots2.png" />
+    </div>
+    <p class="text-white opacity-60 mt-[19rem] z-40 absolute text-center text-2xl w-96 justify-center items-center mx-1 sm:w-[28rem] sm:mx-[6.7rem] sm:mt-[10rem] md:text-4xl md:w-[40rem] md:mx-[5.7rem] md:mt-[13rem] lg:text-3xl lg:w-[45rem] lg:mx-[19.4rem] lg:mt-24 lg:justify-center lg:align-middle lg:items-center lg:flex 2xl:mx-[43rem] 2xl:w-[35rem] 2xl:mt-44">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem placeat aut? Voluptas numquam quam laborum quasi, porro maxime ut.
+    </p>
+    <div></div>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const cursor = document.querySelector(".custom-cursor");
+  
+          document.body.addEventListener("mousemove", function (e) {
+            const x = e.clientX;
+            const y = e.clientY;
+  
+            cursor.style.transform = `translate(${x}px, ${y}px)`;
+          });
+        });
+      </script>
+  </body>
+</html>
